@@ -12,6 +12,12 @@ const rateLimiter = require('express-rate-limit')
 // connectDB
 const connectDB = require('./db/connect')
 const authenticateUser = require('./middleware/authentication')
+
+// IndexRoute 
+app.get('/', (req, res) => {
+  res.send("Jobs api")
+})
+
 // routers
 const authRouter = require('./routes/auth')
 const jobsRouter = require('./routes/jobs') 
